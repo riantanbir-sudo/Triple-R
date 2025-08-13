@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Club Membership Portal</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; }
+header { background:#4CAF50; color:white; padding:1em; text-align:center; }
+nav a, nav button { margin:0 10px; color:white; text-decoration:none; font-weight:bold; cursor:pointer; background:none; border:none; }
+main { max-width:700px; margin:2em auto; padding:2em; background:white; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+form label { display:block; margin-top:1em; }
+form input, form textarea, form button { width:100%; padding:10px; margin-top:0.5em; border-radius:5px; border:1px solid #ccc; }
+form button { background:#4CAF50; color:white; border:none; cursor:pointer; }
+.event { border:1px solid #ccc; padding:1em; margin-bottom:1em; border-radius:5px; }
+.hidden { display:none; }
+.summary-box { background:#f1f1f1; padding:15px; border-radius:8px; margin-top:1em; }
+h2 { text-align:center; color:#4CAF50; }
+a.event-link { color:#4CAF50; text-decoration:none; font-weight:bold; }
+a.event-link:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Club Membership Portal</h1>
+<nav>
+<a href="#" onclick="showSection('profile')">Profile</a>
+<a href="#" onclick="showSection('events')">Events</a>
+<a href="#" onclick="showSection('contact')">Contact</a>
+<button onclick="logout()">Logout</button>
+</nav>
+</header>
+
+<main>
+
+<!-- REGISTER -->
+<section id="registerSection">
+<h2>Register</h2>
+<form id="registerForm">
+<label>Full Name:</label>
+<input type="text" id="regName" required>
+<label>Email:</label>
+<input type="email" id="regEmail" required>
+<label>Phone:</label>
+<input type="tel" id="regPhone" required>
+<label>Department:</label>
+<input type="text" id="regDepartment" required>
+<label>Academic Year:</label>
+<input type="text" id="regYear" required>
+<label>Password:</label>
+<input type="password" id="regPassword" required>
+<label>Confirm Password:</label>
+<input type="password" id="regConfirmPassword" required>
+<button type="submit">Register</button>
+</form>
+</section>
+
+<!-- LOGIN -->
+<section id="loginSection" class="hidden">
+<h2>Login</h2>
+<form id="loginForm">
+<label>Email:</label>
+<input type="email" id="loginEmail" required>
+<label>Password:</label>
+<input type="password" id="loginPassword" required>
+<button type="submit">Login</button>
+</form>
+</section>
+
+<!-- PROFILE -->
+<section id="profileSection" class="hidden">
+<h2>Profile</h2>
+<form id="profileForm">
+<label>Full Name:</label>
+<input type="text" id="profileName" placeholder="Enter your name">
+<label>Email:</label>
+<input type="email" id="profileEmail" placeholder="Enter your email">
+<label>Phone:</label>
+<input type="tel" id="profilePhone" placeholder="Enter your phone">
+<label>Department:</label>
+<input type="text" id="profileDepartment" placeholder="Enter your department">
+<label>Academic Year:</label>
+<input type="text" id="profileYear" placeholder="Enter your academic year">
+<button type="submit">Update Profile</button>
+</form>
+<div class="summary-box" id="profileSummary"></div>
+</section>
+
+<!-- EVENTS -->
+<section id="eventsSection" class="hidden">
+<h2>Events</h2>
+<div class="event">
+<h3>Annual Meetup</h3>
+<p>Date: 2025-09-01 | Venue: Main Hall</p>
+<p>Description: Networking and club updates</p>
+<p><a class="event-link" href="https://www.facebook.com/photo/?fbid=1763280451150616&set=a.998771330934869" target="_blank">View Event Photo</a></p>
+</div>
+<div class="event">
+<h3>Workshop on Tech</h3>
+<p>Date: 2025-09-15 | Venue: Lab 2</p>
+<p>Description: Hands-on coding workshop</p>
+<p><a class="event-link" href="https://www.facebook.com/photo/?fbid=1761294901349171&set=a.998771320934870" target="_blank">View Event Photo</a></p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contactSection" class="hidden">
+<h2>Contact Us</h2>
+<form id="contactForm">
+<label>Name:</label>
+<input type="text" id="contactName" required>
+<label>Email:</label>
+<input type="email" id="contactEmail" required>
+<label>Subject:</label>
+<input type="text" id="contactSubject" required>
+<label>Message:</label>
+<textarea id="contactMessage" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+</main>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Club</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<div class="contact-box">
+  <h3>Contact Us</h3>
+  <p><i class="fas fa-map-marker-alt"></i> Office Location: Sayed Nagar A Block, House -10</p>
+  <p><i class="fab fa-facebook-square"></i> Facebook: 
+    <a href="https://www.facebook.com/profile.php?id=61554144930128" target="_blank">Team RRR</a>
+  </p>
+  <p><i class="fas fa-envelope"></i> Email: 
+    <a href="mailto:teamrrrdiucse@gmail.com">teamrrrdiucse@gmail.com</a>
+  </p>
+  <p><i class="fas fa-phone"></i> Phone: 
+    <a href="tel:01879128386">01879128386</a>
+  </p>
+</div>
+
+</body>
+</html>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+<script>
+// SECTION SWITCH
+function showSection(section){
+['loginSection','registerSection','profileSection','eventsSection','contactSection'].forEach(id=>{
+document.getElementById(id).classList.add('hidden');
+});
+document.getElementById(section+'Section').classList.remove('hidden');
+}
+
+// REGISTER
+document.getElementById('registerForm').addEventListener('submit', function(e){
+e.preventDefault();
+const user={
+name: document.getElementById('regName').value,
+email: document.getElementById('regEmail').value,
+phone: document.getElementById('regPhone').value,
+department: document.getElementById('regDepartment').value,
+year: document.getElementById('regYear').value,
+password: document.getElementById('regPassword').value
+};
+const confirmPass=document.getElementById('regConfirmPassword').value;
+if(user.password!==confirmPass){ alert("Passwords do not match!"); return; }
+localStorage.setItem('user', JSON.stringify(user));
+alert("Registered successfully! Please login.");
+showSection('login');
+});
+
+// LOGIN
+document.getElementById('loginForm').addEventListener('submit', function(e){
+e.preventDefault();
+const email=document.getElementById('loginEmail').value;
+const password=document.getElementById('loginPassword').value;
+const user=JSON.parse(localStorage.getItem('user'));
+if(user && user.email===email && user.password===password){
+localStorage.setItem('loggedIn','true');
+alert("Login successful!");
+// Profile fields remain empty for manual input
+showSection('profile');
+}else{ alert("Invalid login!"); }
+});
+
+// UPDATE PROFILE
+document.getElementById('profileForm').addEventListener('submit', function(e){
+e.preventDefault();
+const updatedUser={
+name: document.getElementById('profileName').value,
+email: document.getElementById('profileEmail').value,
+phone: document.getElementById('profilePhone').value,
+department: document.getElementById('profileDepartment').value,
+year: document.getElementById('profileYear').value,
+password: JSON.parse(localStorage.getItem('user')).password
+};
+localStorage.setItem('user', JSON.stringify(updatedUser));
+alert("Profile updated!");
+updateProfileSummary();
+});
+
+function updateProfileSummary(){
+const user=JSON.parse(localStorage.getItem('user'));
+document.getElementById('profileSummary').innerHTML=`
+<p><strong>Name:</strong> ${user.name}</p>
+<p><strong>Email:</strong> ${user.email}</p>
+<p><strong>Phone:</strong> ${user.phone}</p>
+<p><strong>Department:</strong> ${user.department}</p>
+<p><strong>Academic Year:</strong> ${user.year}</p>
+`;
+}
+
+// LOGOUT
+function logout(){
+localStorage.removeItem('loggedIn');
+alert("Logged out!");
+showSection('login');
+}
+
+// CONTACT FORM
+document.getElementById('contactForm').addEventListener('submit', function(e){
+e.preventDefault();
+alert("Message sent! Team RRR will contact you soon.");
+document.getElementById('contactForm').reset();
+});
+
+// SHOW REGISTER BY DEFAULT
+if(localStorage.getItem('loggedIn')==='true'){
+showSection('profile');
+} else { showSection('register'); }
+</script>
+
+</body>
+</html>
